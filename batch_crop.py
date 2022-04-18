@@ -10,8 +10,9 @@ for img_name in os.listdir(src_dir):
     img = cv2.imread(f"{src_dir}/{img_name}")
 
     img_w = img.shape[1]
-    w_crop_factor = 0.15
-    img = img[:, int(img_w * w_crop_factor):int(img_w - img_w * w_crop_factor)]
+    w_crop_factor_left = 0.15
+    w_crop_factor_right = 0.15
+    img = img[:, int(img_w * w_crop_factor_left):int(img_w * (1 - w_crop_factor_right))]
 
     img_h = img.shape[0]
     h_crop_factor_top = 0.1
