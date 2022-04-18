@@ -5,7 +5,7 @@ import sys
 src_dir = sys.argv[1]
 dest_dir = sys.argv[2]
 
-for img_name in os.listdir('slike'):
+for img_name in os.listdir(src_dir):
 
     img = cv2.imread(f"{src_dir}/{img_name}")
 
